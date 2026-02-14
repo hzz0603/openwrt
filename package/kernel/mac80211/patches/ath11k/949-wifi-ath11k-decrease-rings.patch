@@ -1,0 +1,25 @@
+commit e73e05d6eeeda4b7d103c773f4a844509ee6694a
+Author: Yanko Yankulov <yanko.yankulov@gmail.com>
+Date:   Sun Mar 1 00:53:51 2026 +0200
+
+    ath11k: decrease rx ring sizes
+
+diff --git a/drivers/net/wireless/ath/ath11k/dp.h b/drivers/net/wireless/ath/ath11k/dp.h
+index 969e2579e55b..49cda460acf0 100644
+--- a/drivers/net/wireless/ath/ath11k/dp.h
++++ b/drivers/net/wireless/ath/ath11k/dp.h
+@@ -219,11 +219,11 @@ struct ath11k_pdev_dp {
+ #define DP_REO_EXCEPTION_RING_SIZE	128
+ #define DP_REO_CMD_RING_SIZE		256
+ #define DP_REO_STATUS_RING_SIZE		2048
+-#define DP_RXDMA_BUF_RING_SIZE		4096
++#define DP_RXDMA_BUF_RING_SIZE		512
+ #define DP_RXDMA_REFILL_RING_SIZE	2048
+ #define DP_RXDMA_ERR_DST_RING_SIZE	1024
+-#define DP_RXDMA_MON_STATUS_RING_SIZE	1024
+-#define DP_RXDMA_MONITOR_BUF_RING_SIZE	4096
++#define DP_RXDMA_MON_STATUS_RING_SIZE	128
++#define DP_RXDMA_MONITOR_BUF_RING_SIZE	128
+ #define DP_RXDMA_MONITOR_DST_RING_SIZE	2048
+ #define DP_RXDMA_MONITOR_DESC_RING_SIZE	4096
+ 
