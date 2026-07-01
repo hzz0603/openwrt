@@ -233,3 +233,17 @@ define Device/zyxel_scr50axe
 		ipq-wifi-zyxel_scr50axe
 endef
 TARGET_DEVICES += zyxel_scr50axe
+
+define Device/ruijie_rg-ma3063
+	$(call Device/FitImageLzma)
+	$(call Device/UbiFit)
+	DEVICE_VENDOR := Ruijie
+	DEVICE_MODEL := RG-MA3063
+	DEVICE_DTS_CONFIG := config@mp02.1
+	SOC := ipq5018
+	BLOCKSIZE := 128k
+	PAGESIZE := 2048
+	IMAGE_SIZE := 120704k
+	NAND_SIZE := 128m
+endef
+TARGET_DEVICES += ruijie_rg-ma3063
