@@ -179,6 +179,11 @@ platform_pre_upgrade() {
 
 platform_do_upgrade() {
 	case "$(board_name)" in
+	ruijie,rg-ma3063)
+		CI_UBIPART="firmware"
+		
+		nand_do_upgrade "$1"
+		;;
 	cmcc,pz-l8|\
 	elecom,wrc-x3000gs2|\
 	iodata,wn-dax3000gr)
